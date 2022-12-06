@@ -15,4 +15,4 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: Print branch name
-        run: echo "The pull request is targeting the ${{ github.base_ref }} branch"
+        run: echo "${{ github }}"
