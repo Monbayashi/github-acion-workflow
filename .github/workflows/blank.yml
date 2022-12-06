@@ -4,7 +4,7 @@ on:
   # https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#onpull_requestpull_request_targetbranchesbranches-ignore
 #   pull_request:
 #     types:
-#       - open
+#       - opened
 #     branches:
 #       - 'hotfix/**'
   workflow_dispatch:
