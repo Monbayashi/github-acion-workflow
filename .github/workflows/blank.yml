@@ -2,11 +2,12 @@ name: TEST_A
 
 on:
   # https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#onpull_requestpull_request_targetbranchesbranches-ignore
-  pull_request:
-    types:
-      - open
+#   pull_request:
+#     types:
+#       - open
 #     branches:
 #       - 'hotfix/**'
+  workflow_dispatch:
 jobs:
   hotfix:
     runs-on: ubuntu-latest
