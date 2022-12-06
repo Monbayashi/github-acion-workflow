@@ -2,15 +2,17 @@ name: TEST_A
 
 on:
   # https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#onpull_requestpull_request_targetbranchesbranches-ignore
-#   pull_request:
-#     types:
-#       - opened
-#     branches:
-#       - 'hotfix/**'
-  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+#   workflow_dispatch:
 jobs:
   hotfix:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
         run: echo Hello, world!
+      - name: Print branch name
+        run: echo "The pull request is targeting the ${{ github.base_ref }} branch"
